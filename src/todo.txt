@@ -1,0 +1,17 @@
+✅ Card layout of contacts list
+✅ Each contact in list should show first last phone
+✅ User should be able to edit existing contact on a seperate page, all fields editable
+✅  In progress Expand contact card to see email
+✅ Delete an existing user from contacts list
+✅ Confirmation delete from a pop up
+✅ Create a new contact on a seperate page
+✅ After any contact actions the list must update to reflect changes
+Styling
+
+****Bonus
+✅ Persist state across refresh
+✅ Application should be responsive across web and mobile
+Add form validation and formatting for phone number
+Add form validation for email
+Accesibility
+Avatars
