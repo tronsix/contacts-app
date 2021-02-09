@@ -57,14 +57,21 @@ export default function Contacts(props) {
     const local = localJSS();
     
     const closeDialog = () => {
-        setState({ ...state, open: false });
+        setState({ ...state, open: false, id: null });
     };
+
+    const displayContact = (id) => {
+        const contact = Contacts.find(i =>
+            i.id === id);
+        const fullname = `${contact.firstname} ${contact.lastname}`;
+        return fullname;
+    }
 
     const deleteContact = (id) => {
         const updatedContacts = Contacts.filter(contact =>
             contact.id !== id);
-        setAppState({...appState, Contacts: updatedContacts});
-        closeDialog();
+            setAppState({...appState, Contacts: updatedContacts});
+            closeDialog();
     };
 
     const isEmailVisible = (id) => {
@@ -96,7 +103,7 @@ export default function Contacts(props) {
                 <DialogTitle style={{textAlign: 'center', padding: '8px 24px'}}>Contacts</DialogTitle>
                 <Divider />
                 <DialogContent style={{textAlign: 'center', padding: '24px 24px'}}>
-                    <Typography variant="h2">Are you sure you want to delete this contact?</Typography>
+                    <Typography variant="h2">Are you sure you want to delete {state.id && displayContact(state.id)}?</Typography>
                 </DialogContent>
                 <CardActions>
                     <Button className={local.deleteButton} style={{flexGrow: 1}} onClick={() => deleteContact(state.id)}>Delete</Button>
