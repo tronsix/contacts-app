@@ -6,24 +6,24 @@ const initialState = {
     Contacts: [
       {
         id: 1001,
-        firstname: 'Rodney',
-        lastname: 'Martinez',
+        firstname: 'Tony',
+        lastname: 'Stark',
         phone: '512-555-5555',
-        email: 'rodney@gmail.com'
+        email: 'tony@starkindustries.com'
       },
       {
         id: 1002,
-        firstname: 'Cheryl',
-        lastname: 'Waters',
+        firstname: 'Bruce',
+        lastname: 'Banner',
         phone: '512-555-5678',
-        email: 'cheryl@gmail.com'
+        email: 'iamhulk@gmail.com'
       },
       {
         id: 1003,
-        firstname: 'Doug',
-        lastname: 'Waters',
+        firstname: 'Wanda',
+        lastname: 'Romanoff',
         phone: '512-555-1234',
-        email: 'doug@gmail.com'
+        email: 'scarletwitch@gmail.com'
       },
     ],
     lastContactId: 1003,
