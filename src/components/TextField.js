@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
  }), { name: 'MuiOutlinedInput' });
 
 export default function Component(props) {
-    const { className, error, id, helperText, inputProps, label, onChange, type, value, } = props;
+    const { className, error, id, helperText, inputProps, label, onBlur, onChange, type, value, } = props;
     //styles
     const classes = useStyles();
 
@@ -38,6 +38,7 @@ export default function Component(props) {
                 classes:{root: classes.root, notchedOutline: classes.notchedOutline}
             }}
             label={label} 
+            onBlur={onBlur}
             onChange={onChange} 
             type={type}
             value={value} 
